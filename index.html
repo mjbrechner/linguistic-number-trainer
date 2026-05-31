@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Linguistic Number Trainer</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/profile-pic.png">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Linguistic Number Trainer</h1>
+    </header>
+
+
+    <main>
+        <p>trainer for numbers in various languages. Type in the answer in the target language!</p>
+
+        <div class="number-box">
+            <div id="number-in-question"></div>
+            <textarea name="" id="input-area"></textarea>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            <script>
+                const thisYear = new Date().getFullYear();
+                if (thisYear === 2026) {
+                    document.write(`Copyright © 2026 `);
+                } else {
+                    document.write(`Copyright © 2026-${thisYear} `);
+                }
+            </script>
+            <a class="credits-link" href="https://github.com/mjbrechner">M.J. Brechner</a>
+        </p>
+    </footer>
+    <script src="javascript/number-dictionary.js" defer></script>
+    <script src="javascript/index.js" defer></script>
+</body>
+
+</html>

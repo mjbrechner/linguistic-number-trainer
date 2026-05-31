@@ -1,0 +1,26 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: .8em;
+    margin-bottom: .25em;
+}
+
+/*tablet query*/
+@media only screen and (min-width: 768px) {
+
+    footer {
+        flex-direction: row;
+        margin-top: 1.25em;
+        font-size: .9em;
+    }
+
+}
+
+/*desktop query*/
+@media only screen and (min-width: 992px) {
+    footer {
+        font-size: 1em;
+    }
+
+}
