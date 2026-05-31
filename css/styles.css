@@ -1,3 +1,8 @@
+#input-area {
+    width: 200px;
+    resize: none;
+}
+
 footer {
     display: flex;
     flex-direction: column;
