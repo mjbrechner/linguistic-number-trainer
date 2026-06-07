@@ -8,13 +8,22 @@
    const numberInQuestionBox = document.querySelector("#number-in-question");
    const userInputBox = document.querySelector("#input-area");
 
-   numberInQuestionItem = numberDictionary[Math.floor(Math.random() * numberDictionary.length)];
-   console.log(numberInQuestionItem.question);
-   numberInQuestionItemUserAnswer = numberInQuestionItem.question;
-   numberInQuestionItemCorrectAnswer = numberInQuestionItem.answer;
+   function newQuestion() {
+      numberInQuestionItem = numberDictionary[Math.floor(Math.random() * numberDictionary.length)];
+      console.log(numberInQuestionItem.question);
+      numberInQuestionItemUserAnswer = numberInQuestionItem.question;
+      numberInQuestionItemCorrectAnswer = numberInQuestionItem.answer;
 
-   numberInQuestionBox.innerText = numberInQuestionItemUserAnswer;
+      numberInQuestionBox.innerText = numberInQuestionItemUserAnswer;
+   }
 
+   newQuestion();
+
+   function correctAnswer() {
+      alert("Correct!");
+      userInputBox.value = "";
+      newQuestion();
+   }
 
    userInputBox.addEventListener("keyup", (event) => {
       numberInQuestionItemUserAnswer = userInputBox.value;
@@ -31,6 +40,7 @@
 
       if (rightAnswer.includes(numberInQuestionItemUserAnswer)) {
          console.log(`correct. Your answer is ${numberInQuestionItemUserAnswer}.`);
+         correctAnswer();
       } else {
          console.log(`wrong. Your answer is ${numberInQuestionItemUserAnswer}.`);
       }
