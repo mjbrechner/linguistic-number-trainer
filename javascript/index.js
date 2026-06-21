@@ -5,6 +5,11 @@
    let numberInQuestionItemUserAnswer;
    let numberInQuestionItemCorrectAnswer;
    let targetLanguage = "English";
+   let numberOfQuestions = 1;
+   let seconds = 0;
+   let secondsTotal = 0;
+   let secondsAverage = 0;
+   let timerID = null;
    const numberInQuestionBox = document.querySelector("#number-in-question");
    const userInputBox = document.querySelector("#input-area");
 
@@ -15,13 +20,43 @@
       numberInQuestionItemCorrectAnswer = numberInQuestionItem.answer;
 
       numberInQuestionBox.innerText = numberInQuestionItemUserAnswer;
+      numberOfQuestions++;
+      resetTimer();
    }
 
+   function timerDisplay() {
+      document.getElementById("timer-display").innerText = `Time: ${seconds}`
+   }
+
+   function timerStart() {
+      if (timerID !== null) return;
+      timerDisplay();
+      timerID = setInterval(() => {
+         seconds++;
+         timerDisplay();
+      }, 1000);
+   }
+
+   function resetTimer() {
+      clearInterval(timerID);
+      timerID = null;
+      seconds = 0;
+      timerStart();
+   }
+
+   timerStart();
    newQuestion();
 
    function correctAnswer() {
-      alert("Correct!");
+      alert(`Correct! You got this in ${seconds} seconds!`);
       userInputBox.value = "";
+
+      //Calculate average time
+      secondsTotal = secondsTotal + seconds;
+      secondsAverage = (secondsTotal/numberOfQuestions).toFixed(2);
+      document.getElementById("timer-average-display").innerText = `Time Average: ${secondsAverage}`;
+      //End calculate average time
+
       newQuestion();
    }
 
