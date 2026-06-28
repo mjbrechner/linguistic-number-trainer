@@ -12,6 +12,7 @@
    let timerID = null;
    const numberInQuestionBox = document.querySelector("#number-in-question");
    const userInputBox = document.querySelector("#input-area");
+   const notificationBox = document.getElementById("notification-box");
 
    function newQuestion() {
       numberInQuestionItem = numberDictionary[Math.floor(Math.random() * numberDictionary.length)];
@@ -25,7 +26,10 @@
    }
 
    function timerDisplay() {
-      document.getElementById("timer-display").innerText = `Time: ${seconds}`
+      document.getElementById("timer-display").innerText = `Time: ${seconds}`;
+      if (seconds === 3) {
+         notificationBox.innerText = "";
+      }
    }
 
    function timerStart() {
@@ -48,12 +52,13 @@
    newQuestion();
 
    function correctAnswer() {
-      alert(`Correct! You got this in ${seconds} seconds!`);
+      // alert(`Correct! You got this in ${seconds} seconds!`);
+      notificationBox.innerText = `Correct!`;
       userInputBox.value = "";
 
       //Calculate average time
       secondsTotal = secondsTotal + seconds;
-      secondsAverage = (secondsTotal/numberOfQuestions).toFixed(2);
+      secondsAverage = (secondsTotal / numberOfQuestions).toFixed(2);
       document.getElementById("timer-average-display").innerText = `Time Average: ${secondsAverage}`;
       //End calculate average time
 
