@@ -5,14 +5,33 @@
    let numberInQuestionItemUserAnswer;
    let numberInQuestionItemCorrectAnswer;
    let targetLanguage = "English";
+   document.getElementById("language-english").style.borderColor = "pink";
    let numberOfQuestions = 1;
    let seconds = 0;
    let secondsTotal = 0;
    let secondsAverage = 0;
    let timerID = null;
    const numberInQuestionBox = document.querySelector("#number-in-question");
+   const inputBox = document.querySelector("#input-area");
    const userInputBox = document.querySelector("#input-area");
    const notificationBox = document.getElementById("notification-box");
+
+
+   function languageChange() {
+      document.getElementById("language-english").style.borderColor = "black";
+      document.getElementById("language-spanish").style.borderColor = "black";
+      inputBox.focus();
+   }
+
+   function languageSelectEnglish() {
+      targetLanguage = "English";
+      document.getElementById("language-english").style.borderColor = "pink";
+   }
+
+   function languageSelectSpanish() {
+      targetLanguage = "Spanish";
+      document.getElementById("language-spanish").style.borderColor = "pink";
+   }
 
    function newQuestion() {
       numberInQuestionItem = numberDictionary[Math.floor(Math.random() * numberDictionary.length)];

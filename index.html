@@ -13,14 +13,18 @@
 <body>
     <header>
         <h1>Linguistic Number Trainer</h1>
-        <h3>trainer for numbers in various languages. Type in the answer in the target language!</h3>
+        <h3>Trainer for numbers in various languages. Type in the answer in the target language!</h3>
     </header>
 
+    <div id="language-section">
+        <div class="language" id="language-spanish" onclick="languageChange(); languageSelectSpanish()">Español</div>
+        <div class="language" id="language-english" onclick="languageChange(); languageSelectEnglish()">English</div>
+    </div>
 
     <main>
         <div class="number-box">
             <div id="number-in-question"></div>
-            <textarea name="" id="input-area" maxlength="13"></textarea>
+            <textarea name="" id="input-area" maxlength="13" autofocus></textarea>
             <!-- Max length needs to be 31 for British English numbers 0-1000 but only 13 for 0-100 for all Englishes. -->
         </div>
         <div class="timer">
