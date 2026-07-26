@@ -20,6 +20,7 @@
    function languageChange() {
       document.getElementById("language-english").style.borderColor = "black";
       document.getElementById("language-spanish").style.borderColor = "black";
+      document.getElementById("language-japanese").style.borderColor = "black";
       inputBox.focus();
    }
 
@@ -31,6 +32,11 @@
    function languageSelectSpanish() {
       targetLanguage = "Spanish";
       document.getElementById("language-spanish").style.borderColor = "pink";
+   }
+
+   function languageSelectJapanese() {
+      targetLanguage = "Japanese";
+      document.getElementById("language-japanese").style.borderColor = "pink";
    }
 
    function newQuestion() {
@@ -92,6 +98,8 @@
          rightAnswer = numberInQuestionItem.answerEnglish;
       } else if (targetLanguage === "Spanish") {
          rightAnswer = numberInQuestionItem.answerSpanish;
+      } else if (targetLanguage === "Japanese") {
+         rightAnswer = numberInQuestionItem.answerJapanese;
       }
 
       console.log(`match your answer of ${numberInQuestionItemUserAnswer} with ${numberInQuestionItem.question}.`);
