@@ -28,14 +28,23 @@ h3 {
     right: 5px;
     display: flex;
     flex-direction: row;
-    gap: 5px;
+    gap: 10px;
 }
 
 .language {
-    padding: 1px 3px 1px 3px;
-    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1px 4px 1px 4px;
+    border: none;
+    outline: 2px solid;
     border-radius: 3px;
     cursor: pointer;
+    flex-shrink: 0;
+}
+
+.language:active {
+    transform: translate(1px);
 }
 
 .number-box {

@@ -5,7 +5,8 @@
    let numberInQuestionItemUserAnswer;
    let numberInQuestionItemCorrectAnswer;
    let targetLanguage = "English";
-   document.getElementById("language-english").style.borderColor = "pink";
+   document.getElementById("language-english").style.outlineColor = "pink";
+   document.getElementById("language-english").style.outlineWidth = "3px";
    let numberOfQuestions = 1;
    let seconds = 0;
    let secondsTotal = 0;
@@ -18,25 +19,31 @@
 
 
    function languageChange() {
-      document.getElementById("language-english").style.borderColor = "black";
-      document.getElementById("language-spanish").style.borderColor = "black";
-      document.getElementById("language-japanese").style.borderColor = "black";
+      document.getElementById("language-english").style.outlineColor = "black";
+      document.getElementById("language-spanish").style.outlineColor = "black";
+      document.getElementById("language-japanese").style.outlineColor = "black";
+      document.getElementById("language-english").style.outlineWidth = "2px";
+      document.getElementById("language-spanish").style.outlineWidth = "2px";
+      document.getElementById("language-japanese").style.outlineWidth = "2px";
       inputBox.focus();
    }
 
    function languageSelectEnglish() {
       targetLanguage = "English";
-      document.getElementById("language-english").style.borderColor = "pink";
+      document.getElementById("language-english").style.outlineColor = "pink";
+      document.getElementById("language-english").style.outlineWidth = "3px";
    }
 
    function languageSelectSpanish() {
       targetLanguage = "Spanish";
-      document.getElementById("language-spanish").style.borderColor = "pink";
+      document.getElementById("language-spanish").style.outlineColor = "pink";
+      document.getElementById("language-spanish").style.outlineWidth = "3px";
    }
 
    function languageSelectJapanese() {
       targetLanguage = "Japanese";
-      document.getElementById("language-japanese").style.borderColor = "pink";
+      document.getElementById("language-japanese").style.outlineColor = "pink";
+      document.getElementById("language-japanese").style.outlineWidth = "3px";
    }
 
    function newQuestion() {
