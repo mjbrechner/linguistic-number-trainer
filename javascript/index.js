@@ -5,7 +5,9 @@
    let numberInQuestionItemUserAnswer;
    let numberInQuestionItemCorrectAnswer;
    let targetLanguage = "English";
-   document.getElementById("language-english").style.outlineColor = "pink";
+   document.getElementById("language-english").style.outlineColor = "#8FA28A";
+   document.getElementById("language-english").style.outlineColor = "#FFC570";
+   document.getElementById("language-english").style.backgroundColor = "#FFE2AF";
    document.getElementById("language-english").style.outlineWidth = "3px";
    let numberOfQuestions = 1;
    let seconds = 0;
@@ -19,9 +21,12 @@
 
 
    function languageChange() {
-      document.getElementById("language-english").style.outlineColor = "black";
-      document.getElementById("language-spanish").style.outlineColor = "black";
-      document.getElementById("language-japanese").style.outlineColor = "black";
+      document.getElementById("language-english").style.outlineColor = "#007979";
+      document.getElementById("language-spanish").style.outlineColor = "#007979";
+      document.getElementById("language-japanese").style.outlineColor = "#007979";
+      document.getElementById("language-english").style.backgroundColor = "#FFFAF3";
+      document.getElementById("language-spanish").style.backgroundColor = "#FFFAF3";
+      document.getElementById("language-japanese").style.backgroundColor = "#FFFAF3";
       document.getElementById("language-english").style.outlineWidth = "2px";
       document.getElementById("language-spanish").style.outlineWidth = "2px";
       document.getElementById("language-japanese").style.outlineWidth = "2px";
@@ -30,19 +35,22 @@
 
    function languageSelectEnglish() {
       targetLanguage = "English";
-      document.getElementById("language-english").style.outlineColor = "pink";
+      document.getElementById("language-english").style.outlineColor = "#FFC570";
+      document.getElementById("language-english").style.backgroundColor = "#FFE2AF";
       document.getElementById("language-english").style.outlineWidth = "3px";
    }
 
    function languageSelectSpanish() {
       targetLanguage = "Spanish";
-      document.getElementById("language-spanish").style.outlineColor = "pink";
+      document.getElementById("language-spanish").style.outlineColor = "#FFC570";
+      document.getElementById("language-spanish").style.backgroundColor = "#FFE2AF";
       document.getElementById("language-spanish").style.outlineWidth = "3px";
    }
 
    function languageSelectJapanese() {
       targetLanguage = "Japanese";
-      document.getElementById("language-japanese").style.outlineColor = "pink";
+      document.getElementById("language-japanese").style.outlineColor = "#FFC570";
+      document.getElementById("language-japanese").style.backgroundColor = "#FFE2AF";
       document.getElementById("language-japanese").style.outlineWidth = "3px";
    }
 
@@ -61,6 +69,7 @@
       document.getElementById("timer-display").innerText = `Time: ${seconds}`;
       if (seconds === 3) {
          notificationBox.innerText = "";
+         notificationBox.style.visibility = "hidden";
       }
    }
 
@@ -85,7 +94,8 @@
 
    function correctAnswer() {
       // alert(`Correct! You got this in ${seconds} seconds!`);
-      notificationBox.innerText = `Correct!`;
+      notificationBox.style.visibility = "visible";
+      notificationBox.innerText = "Correct!";
       userInputBox.value = "";
 
       //Calculate average time

@@ -1,3 +1,15 @@
+/* Palette: 
+white (background): #FFFAF3
+tan (special background): #FFE2AF
+yellow (outline): #FFC570
+teal (text): #007979
+*/
+
+* {
+background-color: #FFFAF3;
+color: #007979;
+}
+
 body,
 header,
 .number-box {
@@ -53,12 +65,13 @@ h3 {
 }
 
 #number-in-question {
+    background-color: #FFE2AF;
     font-size: 48px;
     text-align: center;
     width: 55px;
     height: 55px;
     padding: 5px;
-    border: 5px solid #520352;
+    border: 5px solid #FFC570;
     border-radius: 50%;
 }
 
@@ -69,14 +82,23 @@ h3 {
     font-size: 24px;
     text-align: center;
     resize: none;
+    /* border-color: #FFC570; */
+}
+
+#input-area:focus {
+    /* outline: none; */
+    outline: 2px solid #FFC570;
+    border-color: #FFC570;
 }
 
 #notification-box {
-    background-color: green;
-    color: bisque;
+    background-color: #FFE2AF;
+    color: #007979;
     font-size: 16px;
     width: fit-content;
     height: fit-content;
+    border: 2px solid #FFC570;
+    visibility: hidden;
 }
 
 footer {
