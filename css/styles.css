@@ -63,6 +63,11 @@ h3 {
     transform: translate(1px);
 }
 
+.language:hover {
+    color: color-mix(in srgb, #007979 95%, #FFC570 25%);
+    opacity: 75%;
+}
+
 .number-box {
     gap: 10px;
     margin: 20px;
