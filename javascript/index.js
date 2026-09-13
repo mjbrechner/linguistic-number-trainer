@@ -68,7 +68,6 @@
    function timerDisplay() {
       document.getElementById("timer-display").innerText = `Time: ${seconds}`;
       if (seconds === 3) {
-         notificationBox.innerText = "";
          notificationBox.style.visibility = "hidden";
       }
    }
@@ -95,7 +94,6 @@
    function correctAnswer() {
       // alert(`Correct! You got this in ${seconds} seconds!`);
       notificationBox.style.visibility = "visible";
-      notificationBox.innerText = "Correct!";
       userInputBox.value = "";
 
       //Calculate average time
