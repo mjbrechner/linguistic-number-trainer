@@ -106,6 +106,8 @@
    }
 
    userInputBox.addEventListener("keyup", (event) => {
+      notificationBox.style.visibility = "hidden"; // Once a key is pressed, hide any remaining "Correct" notification.
+
       numberInQuestionItemUserAnswer = userInputBox.value;
 
       let rightAnswer;

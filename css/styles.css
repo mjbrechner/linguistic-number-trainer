@@ -128,6 +128,7 @@ main {
     font-size: 20px;
     width: fit-content;
     height: fit-content;
+    padding: 1px 5px 1px 5px;
     margin-top: 5px;
     border: 2px solid #FFC570;
     border-radius: 5px;
