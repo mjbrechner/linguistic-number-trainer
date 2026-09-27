@@ -105,6 +105,11 @@
       newQuestion();
    }
 
+userInputBox.addEventListener("keydown", (event) => {
+   if (event.key === "Enter") {
+      event.preventDefault();
+   }});
+
    userInputBox.addEventListener("keyup", (event) => {
       notificationBox.style.visibility = "hidden"; // Once a key is pressed, hide any remaining "Correct" notification.
 
