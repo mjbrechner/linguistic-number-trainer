@@ -125,6 +125,7 @@ main {
 #notification-box {
     background-color: #FFE2AF;
     color: #007979;
+    font-family: "Mochiy Pop P One", sans-serif;
     font-size: 20px;
     width: fit-content;
     height: fit-content;
