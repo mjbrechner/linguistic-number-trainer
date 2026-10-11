@@ -31,8 +31,12 @@
     <main>
         <div class="number-box">
             <div id="number-in-question"></div>
-            <textarea name="" id="input-area" maxlength="13" autofocus></textarea>
-            <!-- Max length needs to be 31 for British English numbers 0-1000 but only 13 for 0-100 for all Englishes. -->
+            <div id="input-and-question">
+                <textarea name="" id="input-area" maxlength="13" autofocus></textarea>
+                <!-- Max length needs to be 31 for British English numbers 0-1000 but only 13 for 0-100 for all Englishes. -->
+                <button id="question" onclick="hint()">?</button>
+            </div>
+
 
         </div>
         <div id="timer-box">

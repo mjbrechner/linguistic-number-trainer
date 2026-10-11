@@ -91,6 +91,23 @@
    timerStart();
    newQuestion();
 
+   function hint() {
+      let hint;
+      if (targetLanguage === "English") {
+         hint = numberInQuestionItem.answerEnglish;
+      } else if (targetLanguage === "Spanish") {
+         hint = numberInQuestionItem.answerSpanish;
+      } else if (targetLanguage === "Japanese") {
+         hint = numberInQuestionItem.answerJapanese;
+      }
+      hint = String(hint);
+      let hintHidden = "";
+      for (let i = 0; i < hint.length; i++) {
+         hintHidden += (Math.random() < 0.5) ? `?` : hint[i];
+      }
+      alert(hintHidden);
+   }
+
    function correctAnswer() {
       // alert(`Correct! You got this in ${seconds} seconds!`);
       notificationBox.style.visibility = "visible";
@@ -105,10 +122,11 @@
       newQuestion();
    }
 
-userInputBox.addEventListener("keydown", (event) => {
-   if (event.key === "Enter") {
-      event.preventDefault();
-   }});
+   userInputBox.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+         event.preventDefault();
+      }
+   });
 
    userInputBox.addEventListener("keyup", (event) => {
       notificationBox.style.visibility = "hidden"; // Once a key is pressed, hide any remaining "Correct" notification.
