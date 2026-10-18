@@ -93,6 +93,7 @@
 
    function hint() {
       let hint;
+      let hintHidden = "???";
       if (targetLanguage === "English") {
          hint = numberInQuestionItem.answerEnglish;
       } else if (targetLanguage === "Spanish") {
@@ -100,12 +101,23 @@
       } else if (targetLanguage === "Japanese") {
          hint = numberInQuestionItem.answerJapanese;
       }
-      hint = String(hint);
-      let hintHidden = "";
-      for (let i = 0; i < hint.length; i++) {
-         hintHidden += (Math.random() < 0.5) ? `?` : hint[i];
+
+      while (true) {
+         hint = String(hint);
+         hintHidden = "";
+         for (let i = 0; i < hint.length; i++) {
+            hintHidden += (Math.random() < 0.5) ? `?` : hint[i];
+         }
+
+         if (hintHidden.includes("?") && /[^\?]/.test(hintHidden)) {
+            break; // hintHidden must contain at least one question mark but is not entirely question marks. If so, exit the loop.
+         }
       }
-      alert(hintHidden);
+
+      // alert(hintHidden);
+      userInputBox.value = "";
+      userInputBox.placeholder = hintHidden;
+      userInputBox.focus();
    }
 
    function correctAnswer() {
@@ -130,6 +142,7 @@
 
    userInputBox.addEventListener("keyup", (event) => {
       notificationBox.style.visibility = "hidden"; // Once a key is pressed, hide any remaining "Correct" notification.
+      userInputBox.placeholder = ""; // Once a key is pressed, hide any remaining placeholder text.
 
       numberInQuestionItemUserAnswer = userInputBox.value;
 
