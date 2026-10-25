@@ -5,6 +5,7 @@
    let numberInQuestionItemUserAnswer;
    let numberInQuestionItemCorrectAnswer;
    let targetLanguage = "English";
+   let numberOfHints = 0;
    document.getElementById("language-english").style.outlineColor = "#8FA28A";
    document.getElementById("language-english").style.outlineColor = "#FFC570";
    document.getElementById("language-english").style.backgroundColor = "#FFE2AF";
@@ -92,6 +93,8 @@
    newQuestion();
 
    function hint() {
+      numberOfHints++;
+      document.getElementById("hint-count-display").innerText = `Hints: ${numberOfHints}`;
       let hint;
       let hintHidden = "???";
       if (targetLanguage === "English") {

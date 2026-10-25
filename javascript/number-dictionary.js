@@ -240,5 +240,85 @@ const numberDictionary = [
         "answerJapanese": [""],
         "answerSpanish": ["treinta"],
         "range": "1-100"
+    },
+
+    {
+        "question": "31",
+        "answerEnglish": ["thirty-one", "thirty one", "thirtyone"],
+        "answerJapanese": [""],
+        "answerSpanish": ["treinta y uno", "treintayuno"],
+        "range": "1-100"
+    },
+
+    {
+        "question": "32",
+        "answerEnglish": ["thirty-two", "thirty two", "thirtytwo"],
+        "answerJapanese": [""],
+        "answerSpanish": ["treinta y dos", "treintaydos"],
+        "range": "1-100"
+    },
+
+    {
+        "question": "33",
+        "answerEnglish": ["thirty-three", "thirty three", "thirtythree"],
+        "answerJapanese": [""],
+        "answerSpanish": ["treinta y tres", "treintaytres"],
+        "range": "1-100"
+    },
+
+    {
+        "question": "34",
+        "answerEnglish": ["thirty-four", "thirty four", "thirtyfour"],
+        "answerJapanese": [""],
+        "answerSpanish": ["treinta y cuatro", "treintaycuatro"],
+        "range": "1-100"
+    },
+
+    {
+        "question": "35",
+        "answerEnglish": ["thirty-five", "thirty five", "thirtyfive"],
+        "answerJapanese": [""],
+        "answerSpanish": ["treinta y cinco", "treintaycinco"],
+        "range": "1-100"
+    },
+
+    {
+        "question": "36",
+        "answerEnglish": ["thirty-six", "thirty six", "thirtysix"],
+        "answerJapanese": [""],
+        "answerSpanish": ["treinta y seis", "treintayseis"],
+        "range": "1-100"
+    },
+
+    {
+        "question": "37",
+        "answerEnglish": ["thirty-seven", "thirty seven", "thirtyseven"],
+        "answerJapanese": [""],
+        "answerSpanish": ["treinta y siete", "treintaysiete"],
+        "range": "1-100"
+    },
+
+    {
+        "question": "38",
+        "answerEnglish": ["thirty-eight", "thirty eight", "thirtyeight"],
+        "answerJapanese": [""],
+        "answerSpanish": ["treinta y ocho", "treintayocho"],
+        "range": "1-100"
+    },
+
+    {
+        "question": "39",
+        "answerEnglish": ["thirty-nine", "thirty nine", "thirtynine"],
+        "answerJapanese": [""],
+        "answerSpanish": ["treinta y nueve", "treintaynueve"],
+        "range": "1-100"
+    },
+
+    {
+        "question": "40",
+        "answerEnglish": ["thirty"],
+        "answerJapanese": [""],
+        "answerSpanish": ["cuarenta"],
+        "range": "1-100"
     }
 ];
