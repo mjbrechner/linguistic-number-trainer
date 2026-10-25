@@ -110,6 +110,7 @@ main {
     padding: 5px;
     font-size: 24px;
     text-align: center;
+    justify-content: center;
     border: 2px solid #FFC570;
     border-radius: 5px;
     resize: none;
@@ -118,6 +119,11 @@ main {
 #input-area:focus {
     outline: 2px solid #FFC570;
     border-color: #FFC570;
+}
+
+#input-area::placeholder {
+    font-size: 16px;
+    line-height: 2;
 }
 
 #question {

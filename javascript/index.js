@@ -95,11 +95,11 @@
       let hint;
       let hintHidden = "???";
       if (targetLanguage === "English") {
-         hint = numberInQuestionItem.answerEnglish;
+         hint = numberInQuestionItem.answerEnglish[0];
       } else if (targetLanguage === "Spanish") {
-         hint = numberInQuestionItem.answerSpanish;
+         hint = numberInQuestionItem.answerSpanish[0];
       } else if (targetLanguage === "Japanese") {
-         hint = numberInQuestionItem.answerJapanese;
+         hint = numberInQuestionItem.answerJapanese[0];
       }
 
       while (true) {
