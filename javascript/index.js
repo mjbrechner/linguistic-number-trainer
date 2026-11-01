@@ -109,7 +109,11 @@
          hint = String(hint);
          hintHidden = "";
          for (let i = 0; i < hint.length; i++) {
-            hintHidden += (Math.random() < 0.5) ? `?` : hint[i];
+            if (hint[i] === `-` || hint[i] === ` `) { 
+               hintHidden += hint[i]; // Don't ever hide hyphens or spaces
+            } else {
+               hintHidden += (Math.random() < 0.5) ? `?` : hint[i]; // Do randomly hide other characters
+            }
          }
 
          if (hintHidden.includes("?") && /[^\?]/.test(hintHidden)) {
